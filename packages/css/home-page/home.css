@@ -1,0 +1,139 @@
+.topnav {
+  overflow: hidden;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  height: 75px;
+  display: flex;
+}
+
+.topnav img {
+  width: 80px;
+  height: 80px;
+  margin-left: 160%;
+}
+
+.topnav-right {
+  margin-top: 10px;
+  margin-left: 15%;
+  height: 35px;
+}
+.topnav a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 6px 4px;
+  text-decoration: none;
+  font-size: 17px;
+  margin-right: 25px;
+  background-color: #6189c2;
+  color: white;
+  width: 80px;
+}
+
+.topnav input[type="text"] {
+  padding: 6px;
+  margin-top: 10px;
+  margin-left: 40%;
+  border: none;
+  font-size: 17px;
+  width: 800px;
+  border-radius: 25px;
+  background-color: #edecec;
+  height: 35px;
+}
+
+.topnav i {
+  margin-top: 4%;
+  border-radius: 50%;
+  height: 25px;
+  margin-left: 1%;
+}
+
+.container {
+  background-color: #edecec;
+  border-radius: 30px;
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 1224px;
+  padding-bottom: 10px;
+}
+.content {
+  display: flex;
+}
+.img {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 40px;
+}
+.content-right {
+  margin-left: 50px;
+  margin-top: 0px;
+  margin-right: 40px;
+}
+.title h1 {
+  font-size: 33pt;
+  margin-top: 0;
+}
+
+.info {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 14pt;
+}
+.info p {
+  margin: 10px 0;
+}
+
+button a {
+  text-decoration: none;
+  color: #fff;
+}
+.button {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.button button {
+  background-color: #3a3a70;
+  font-size: 16pt;
+  border: none;
+  border-radius: 18px;
+  padding: 5px 15px;
+}
+.text {
+  margin-top: 20px;
+  line-height: 22px;
+  font-size: 14pt;
+  text-align: justify;
+}
+.submit {
+  margin-top: 20px;
+  position: absolute;
+  top: 87%;
+  right: 72%;
+}
+.submit button {
+  background-color: #d1a947;
+  font-size: 14pt;
+  border: none;
+  border-radius: 18px;
+  padding: 10px 15px;
+}
+
+.footer {
+  background-color: #3a3a70;
+  margin-top: 25px;
+  width: 1445px;
+  height: 210px;
+}
+
+.footer_info {
+  padding-top: 10px;
+  color: white;
+}
+.footer_info h3 {
+  text-align: center;
+}
+.footer_info p {
+  text-align: center;
+}
