@@ -1,5 +1,4 @@
 const localReadingProps = localStorage.getItem("readingProperties");
-const currentRoute = window.location.pathname;
 let readingProperties;
 let backgroundColorInput;
 let textColorInput;
