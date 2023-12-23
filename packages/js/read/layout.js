@@ -18,7 +18,7 @@ const TABLE_OF_CONTENTS = `
             >
               <li class="">
                 <div class="" id="bia">
-                  <a href="./trang-bia-1.html">BÌA SÁCH</a>
+                  <a href="./trang-bia-1.html">BÌA SÁCH 1</a>
                 </div>
               </li>
 
@@ -30,7 +30,7 @@ const TABLE_OF_CONTENTS = `
 
               <li class="group">
                 <div class="cursor-pointer">
-                  <a>Phần 1: CHÌA KHÓA ĐỂ YÊU THƯƠNG CHÍNH MÌNH</a>&nbsp;<i
+                  <a href="./phan-1.html">Phần 1: CHÌA KHÓA ĐỂ YÊU THƯƠNG CHÍNH MÌNH</a>&nbsp;<i
                     class="fa fa-chevron-down"
                   ></i>
                 </div>
@@ -147,7 +147,7 @@ const TABLE_OF_CONTENTS = `
 
               <li class="">
                 <div class="" id="loi-noi-dau">
-                  <a href="./bia-4.html">BÌA SÁCH</a>
+                  <a href="./trang-bia-4.html">BÌA SÁCH 4</a>
                 </div>
               </li>
             </ul>

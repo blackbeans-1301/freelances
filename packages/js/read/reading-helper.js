@@ -99,12 +99,16 @@ if (!localReadingProps) {
 
   if (currentRoute.includes("/read")) {
     bookContentWrapper = document.getElementById("book-content-wrapper");
-    bookReadingContent = document.getElementById("book-reading-content");
+    bookReadingContent = document.getElementById(
+      "book-reading-content-container"
+    );
+
+    console.log("update", readingProperties);
 
     bookContentWrapper.style.backgroundColor =
       readingProperties.backgroundColor;
     bookReadingContent.style.color = readingProperties.textColor;
-    bookReadingContent.style.fontSize = readingProperties.fontSize;
+    bookReadingContent.style.fontSize = `${readingProperties.fontSize}px`;
 
     backgroundColorInput = document.getElementById("background-color-input");
     textColorInput = document.getElementById("text-color-input");

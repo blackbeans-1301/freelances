@@ -16,3 +16,25 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+p {
+  text-indent: 2em;
+  line-height: 1.5em;
+}
+
+.img-desc {
+  font-size: 0.95em;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+table,
+td {
+  border: 1px solid #333;
+}
+
+thead,
+tfoot {
+  background-color: #233b69;
+  color: #fff;
+}
