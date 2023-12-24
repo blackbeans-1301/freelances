@@ -198,7 +198,7 @@ const BANNER = `<div class="flex justify-between items-center px-8">
             <input id="text-color-input" type="color" />
           </div>
 
-          <button class="mt-2 text-base decoration-solid">Reset Default</button>
+          <button class="mt-2 text-base decoration-solid" onclick="resetColor()">Mặc định</button>
         </div>
       </div>
     </div>
