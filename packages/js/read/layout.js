@@ -153,6 +153,84 @@ const TABLE_OF_CONTENTS = `
             </ul>
           </div>`;
 
+const BANNER = `<div class="flex justify-between items-center px-8">
+<div class="w-1/5"></div>
+<div class="text-xl 2xl:text-3xl text-red-800 font-bold">
+  LỚN ĐÙNG, ĐỪNG NGẠI NGÙNG!
+</div>
+
+<!-- Reading Option -->
+<div class="w-1/5">
+  <div class="flex items-center justify-end text-xl">
+    <div class="mx-2">
+      <span
+        class="cursor-pointer hover:text-red-700 hover:font-bold"
+        onclick="onDecreaseFontSize()"
+        >-</span
+      >
+      <span>Aa</span>
+      <span
+        class="cursor-pointer hover:text-red-700 hover:font-bold"
+        onclick="onIncreaseFontSize()"
+        >+</span
+      >
+    </div>
+
+    <span class="text-2xl text-pink-800">|</span>
+
+    <div
+      class="mx-2 group cursor-pointer hover:text-red-700 relative"
+    >
+      <i class="fa-solid fa-droplet"></i>
+      <div
+        class="w-40 h-36 pt-4 absolute z-50 top-full left-1/2 -translate-x-1/2 invisible group-hover:visible"
+      >
+        <div
+          class="w-full h-full py-4 bg-[#FFF5DA] border border-gray-300 flex flex-col justify-center items-center"
+        >
+          <div class="flex items-center pb-2">
+            Màu nền:
+            <input id="background-color-input" type="color" />
+          </div>
+
+          <div class="flex items-center">
+            Màu chữ:
+            <input id="text-color-input" type="color" />
+          </div>
+
+          <button class="mt-2 text-base decoration-solid">Reset Default</button>
+        </div>
+      </div>
+    </div>
+
+    <span class="text-2xl text-pink-800">|</span>
+
+    <div
+      class="ml-2 cursor-pointer hover:text-red-700"
+      onclick="onExpandReadingSpace()"
+    >
+      <i class="fa-solid fa-expand"></i>
+    </div>
+
+    <div class="fixed bottom-8 right-8 flex flex-col">
+      <div
+        class="w-8 h-8 2xl:w-12 2xl:h-12 border-all flex justify-center items-center border-2 border-gray-700 hover:border-pink-800 hover:text-pink-800 rounded-full cursor-pointer mb-3"
+        onclick="onScrollToTop()"
+      >
+        <i class="fa-solid fa-arrow-up"></i>
+      </div>
+
+      <div
+        class="w-8 h-8 2xl:w-12 2xl:h-12 border-all flex justify-center items-center border-2 border-gray-700 hover:border-pink-800 hover:text-pink-800 rounded-full cursor-pointer mb-3"
+        onclick="onScrollToBottom()"
+      >
+        <i class="fa-solid fa-arrow-down"></i>
+      </div>
+    </div>
+  </div>
+</div>
+</div>`;
+
 listOfChapters.forEach((chapter, index) => {
   if (chapter === currentPage) {
     const prevChapter = listOfChapters[index - 1] || "";
@@ -189,6 +267,11 @@ function initTableOfContents() {
   contentWrapper.insertBefore(tableOfContents, contentWrapper.firstChild);
 }
 
+function initBookBanner() {
+  const banner = document.getElementById("banner");
+  banner.innerHTML = BANNER;
+}
+
 function getNavigatorButton(prevChapter, nextChapter) {
   console.log(prevChapter, nextChapter);
   return `
@@ -198,7 +281,7 @@ function getNavigatorButton(prevChapter, nextChapter) {
       <div
         class="flex items-center px-3 py-2 bg-pink-800 cursor-pointer"
       >
-        <i class="fa-solid fa-caret-left"></i>CHƯƠNG TRƯỚC
+        <i class="fa-solid fa-caret-left"></i>PHẦN TRƯỚC
       </div>
     </a>`
       : ""
@@ -210,7 +293,7 @@ function getNavigatorButton(prevChapter, nextChapter) {
       <div
         class="flex items-center px-3 py-2 bg-pink-800 cursor-pointer"
       >
-      CHƯƠNG SAU <i class="fa-solid fa-caret-right"></i>
+      PHẦN SAU <i class="fa-solid fa-caret-right"></i>
       </div>
     </a>`
       : ""
@@ -218,4 +301,5 @@ function getNavigatorButton(prevChapter, nextChapter) {
   `;
 }
 
+initBookBanner();
 initTableOfContents();
