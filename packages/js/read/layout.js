@@ -192,21 +192,29 @@ function initTableOfContents() {
 function getNavigatorButton(prevChapter, nextChapter) {
   console.log(prevChapter, nextChapter);
   return `
-    <a ${prevChapter ? `href="./${prevChapter}"` : ``}>
+  ${
+    prevChapter !== ""
+      ? `<a href=\"./${prevChapter}\">
       <div
         class="flex items-center px-3 py-2 bg-pink-800 cursor-pointer"
       >
-        <i class="fa-solid fa-caret-left"></i>Chương trước
+        <i class="fa-solid fa-caret-left"></i>CHƯƠNG TRƯỚC
       </div>
-    </a>
+    </a>`
+      : ""
+  }
 
-    <a ${nextChapter ? `href="./${nextChapter}"` : ``}>
+  ${
+    nextChapter !== ""
+      ? `<a href=\"./${nextChapter}\">
       <div
         class="flex items-center px-3 py-2 bg-pink-800 cursor-pointer"
       >
-        Chương sau <i class="fa-solid fa-caret-right"></i>
+      CHƯƠNG SAU <i class="fa-solid fa-caret-right"></i>
       </div>
-    </a>
+    </a>`
+      : ""
+  }
   `;
 }
 

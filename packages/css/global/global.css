@@ -38,3 +38,8 @@ tfoot {
   background-color: #233b69;
   color: #fff;
 }
+
+.illustration {
+  width: 70%;
+  margin-bottom: 12px;
+}
