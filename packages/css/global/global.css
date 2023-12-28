@@ -17,6 +17,23 @@
   background: #555;
 }
 
+/* Show scrollbars in full-screen mode */
+:-webkit-full-screen {
+  overflow: auto;
+}
+
+:-moz-full-screen {
+  overflow: auto;
+}
+
+:-ms-fullscreen {
+  overflow: auto;
+}
+
+:fullscreen {
+  overflow: auto;
+}
+
 p {
   text-indent: 2em;
   line-height: 1.5em;
