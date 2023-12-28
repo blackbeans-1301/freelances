@@ -105,7 +105,6 @@ window.addEventListener("scroll", function () {
 
   var threshold =
     header.getBoundingClientRect().bottom + parseInt(marginBottom);
-  console.log(threshold);
 
   if (threshold <= 0) {
     banner.classList.add("to-fixed");
