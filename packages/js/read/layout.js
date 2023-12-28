@@ -84,7 +84,7 @@ const TABLE_OF_CONTENTS = `
               <li class="group">
                 <div class="link">
                   <a href="./phan-3.html"
-                    >Phần 3: Đường lên giường: Bí kíp an toàn </a
+                    >Phần 3: ĐƯỜNG LÊN GIƯỜNG: BÍ KÍP AN TOÀN </a
                   >&nbsp;<i class="fa fa-chevron-down"></i>
                 </div>
                 <ul class="submenu hidden group-hover:block">
@@ -198,7 +198,7 @@ const BANNER = `<div class="flex justify-between items-center px-8">
             <input id="text-color-input" type="color" />
           </div>
 
-          <button class="mt-2 text-base decoration-solid">Reset Default</button>
+          <button class="mt-2 text-base decoration-solid" onclick="resetColor()">Mặc định</button>
         </div>
       </div>
     </div>

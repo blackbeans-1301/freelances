@@ -7,6 +7,8 @@ let bookContentWrapper;
 let bookReadingContent;
 let isExpanded = false;
 
+let hidedHeader = false;
+
 const onChangeBackgroundColor = () => {
   const value = backgroundColorInput.value;
   bookContentWrapper.style.backgroundColor = value;
@@ -71,17 +73,46 @@ const onScrollToBottom = () => {
   }
 };
 
+const resetColor = () => {
+  readingProperties = {
+    backgroundColor: "#ffffff",
+    fontSize: "16",
+    textColor: "#000000",
+  };
+
+  localStorage.setItem("readingProperties", JSON.stringify(readingProperties));
+
+  bookContentWrapper = document.getElementById("book-content-wrapper");
+  bookReadingContent = document.getElementById(
+    "book-reading-content-container"
+  );
+
+  bookContentWrapper.style.backgroundColor = "#ffffff";
+  bookReadingContent.style.color = "#000000";
+
+  backgroundColorInput.value = "#ffffff";
+  textColorInput.value = "#000000";
+};
+
 window.addEventListener("scroll", function () {
   var banner = document.getElementById("banner");
-  var scrollPosition = window.scrollY;
+  const bookWrapper = document.getElementById("book-content-wrapper");
+  const bannerHeight = banner.offsetHeight;
 
-  // Set the threshold where the div becomes fixed
-  var threshold = 120; // Adjust this value as needed
+  const header = document.getElementById("header");
+  const style = window.getComputedStyle(header);
+  const marginBottom = style.marginBottom;
 
-  if (scrollPosition > threshold) {
+  var threshold =
+    header.getBoundingClientRect().bottom + parseInt(marginBottom);
+  console.log(threshold);
+
+  if (threshold <= 0) {
     banner.classList.add("to-fixed");
+    bookWrapper.style.paddingTop = `${bannerHeight + 80}px`;
   } else {
     banner.classList.remove("to-fixed");
+    bookWrapper.style.paddingTop = `80px`;
   }
 });
 
